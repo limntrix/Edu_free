@@ -1,0 +1,1 @@
+print(" why is shrish gay")
