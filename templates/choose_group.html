@@ -1,0 +1,32 @@
+{% extends '_base.html' %}
+{% load static %}
+{% block content %}
+	<!-- ================ start banner Area ================= -->
+	<section class="banner-area">
+		<div class="container">
+			<div class="row justify-content-center align-items-center">
+				<div class="col-lg-12 banner-right">
+					<h1 class="text-white">
+						Available Channels
+					</h1>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- ================ End banner Area ================= -->
+
+    <div class="container">
+        {% for group_name, group_image , group_description , group_link in groups_with_images %}
+        <div class="child">
+            <a href="{{ group_link }}"><label>
+                <img src="{{ group_image }}" alt="{{ group_name }} Image"><br>
+                <a href="{{ group_link }}">{{ group_name }}</a>
+                <div>
+                    <p>{{ group_description }}</p>
+                </div>
+            </label>
+        </a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock content %}
